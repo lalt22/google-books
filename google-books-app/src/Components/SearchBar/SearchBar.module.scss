@@ -1,0 +1,16 @@
+form {
+    display: flex;
+    gap: 10px;
+    margin-right: 20px;
+    & input {
+        border-radius: 20px;
+    }
+
+    & input {
+        background-color: #E6DFDA;
+    }
+    & button {
+        background-color: #C3CED1;
+        border-radius: 20px;
+    }
+}

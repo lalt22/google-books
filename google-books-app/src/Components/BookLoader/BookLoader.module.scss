@@ -1,0 +1,35 @@
+body {
+    background-color: #E6DFDA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: "Cormorant Garamond", serif;
+
+    & .book_loader {
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.header_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("../../assets/banner-1559400_1280.webp");
+
+    & h1 {
+        color: #E6DFDA;
+        margin-left: 20px;
+        font-weight: 700;
+        font-style: normal;
+    }
+}
+
+.book_data {
+    padding: 20px;
+}
+
+
