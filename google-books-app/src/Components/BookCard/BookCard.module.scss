@@ -1,0 +1,30 @@
+.book_card {
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    width: 250px;
+    height: 400px;
+
+    background-color: #c3ced1;
+
+    & img {
+        width: 130px;
+        height: 170px;
+    }
+
+    & h3 {
+        font-size: 20px;
+    }
+
+    & h5 {
+        font-size: 18px;
+        font-weight: 300;;
+    }
+
+    & p {
+        font-size: 16px;
+        font-weight: 700;
+    }
+}
