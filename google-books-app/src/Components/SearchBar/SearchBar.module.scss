@@ -1,16 +1,22 @@
 form {
     display: flex;
-    gap: 10px;
     margin-right: 20px;
-    & input {
-        border-radius: 20px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color: #f2f8f3;
+    &:hover {
+        border-color: #1b4332;
+        cursor: pointer;
     }
 
+
     & input {
-        background-color: #E6DFDA;
+        border-radius: 20px;
+        border: 1px solid transparent;
+        outline: none;
     }
     & button {
-        background-color: #C3CED1;
         border-radius: 20px;
+        border: none;
     }
 }

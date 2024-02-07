@@ -1,10 +1,14 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import "./SearchBar.module.scss";
-const SearchBar = ({ setSearchTerm, bookData, setBookData }) => {
+import search from "../../assets/search.png";
+const SearchBar = ({ setSearchTerm, bookData, setBookData, setNoSearchTerm }) => {
     const [inputValue, setInputValue] = useState("");
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
+        if (inputValue == "") {
+            setNoSearchTerm(true);
+        }
         setSearchTerm(inputValue);
     };
 
@@ -13,14 +17,16 @@ const SearchBar = ({ setSearchTerm, bookData, setBookData }) => {
     }
 
     const handleClear = (e) => {
+        setInputValue("");
         setSearchTerm("");
+        document.getElementById("searchForm").reset();
         setBookData(null);
     }
-
+    
     return (
-        <form onSubmit={handleFormSubmit}>
+        <form id='searchForm' onSubmit={handleFormSubmit}>
             <input type="text" onChange={handleInputChange} />
-            <button type="submit">Search</button>
+            <button type="submit"><img src={search}></img></button>
             {bookData && <button type="reset" onClick={handleClear}>Clear</button>}
         </form>
     )
